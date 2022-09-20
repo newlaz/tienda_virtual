@@ -1,9 +1,9 @@
+
 Options All -Indexes
+RewriteEngine on
 
-RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond
+RewriteCond
 
-RewriteCond %{REQUEST_FILENAME} !-f
-
-RewriteRule ^([a-zA-Z0-9/]+)$ index.php?url=$1 [QSA,L]
+RewriteRule
