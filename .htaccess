@@ -1,7 +1,15 @@
 # Evita que se visualice el contenido de las carpetas al introducir las rutas
 Options All -Indexes
+
+#Activa RewriteEngine que permite reescribir las configuraciones por defecto de las rutas
 RewriteEngine on
 
+# Condicion verdadera la cual busca un archivo valido
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Verifica que una condicion sea verdadera para que se procese los %{REQUEST_FILENAME}
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?url=$1 [QSA, L]
+
+# Reescribe los modulos que pasan por URL
+# Almacena valores recibidos en la variable URL
+RewriteRule ^(.*)$ index.php?url=$1 [QSA, L] 
